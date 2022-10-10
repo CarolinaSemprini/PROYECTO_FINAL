@@ -90,12 +90,13 @@ body {
     }
 
     .portada_title {
-      @include titulo_portada($marg_top: 95px);
+      @include titulo_portada($marg_top: 0px);
       @include efecto_titulo;
     }
 
     .portada_paragraph {
       @include titulo_portada($marg_top: 0px);
+      margin-bottom: 40px;
       @include efecto_titulo;
     }
   }

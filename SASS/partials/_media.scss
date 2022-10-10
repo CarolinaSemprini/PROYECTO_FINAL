@@ -212,6 +212,7 @@
   .noticias {
     background-image: map-get($map: $paleta, $key: "color_hero_fondo");
     color: #fff;
+    overflow: hidden;
 
     .testimony_container {
       display: grid;
@@ -221,7 +222,7 @@
       color: #fff;
 
       .testimony_arrow {
-        width: 30%;
+        width: 70%;
         cursor: pointer;
         color: #fff;
       }
