@@ -15,12 +15,6 @@ body {
   display: grid;
   grid-template-rows: 110px 2fr;
   color: rgb(255, 255, 255);
-  background: linear-gradient(
-      to right,
-      hsla(55, 43%, 50%, 0.144),
-      hsla(138, 47%, 44%, 0.166)
-    ),
-    url("../imagen/inicio_uno.jpg");
 
   &::before {
     content: "";
