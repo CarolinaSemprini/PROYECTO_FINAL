@@ -1,0 +1,147 @@
+.hero_ciudad {
+  width: 100%;
+  height: 50vh;
+  min-height: 200px;
+  max-height: 300px;
+  position: relative;
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  color: rgb(255, 255, 255);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        hsla(55, 43%, 50%, 0.144),
+        hsla(138, 47%, 44%, 0.166)
+      ),
+      url("/imagen/ciudad.jpg");
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .nav {
+    height: 100%;
+    align-items: center;
+    .nav_link {
+      margin: auto;
+      padding: 0;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: max-content;
+      gap: 2em;
+
+      .menu_link--select {
+        @include link_select($color_select);
+      }
+
+      .nav_items {
+        list-style: none;
+
+        .nav_links {
+          color: rgb(255, 255, 255);
+          text-decoration: none;
+        }
+        .nav_links:hover {
+          @include hover($color_hover, $color_nav, 5px);
+        }
+      }
+    }
+    .nav_menu {
+      margin-left: auto;
+      cursor: pointer;
+      display: none;
+      color: #fff;
+
+      .nav_img {
+        display: block;
+        width: 30px;
+      }
+    }
+    .nav_close {
+      display: var(--show, none);
+    }
+  }
+
+  .hero_ciudad_container {
+    overflow: hidden;
+    display: grid;
+    grid-auto-rows: min-content;
+    align-content: center;
+    gap: 1em;
+  }
+  .animate__animated.animate__lightSpeedInRight {
+    --animate-duration: 2s;
+
+    .hero_title {
+      @include titulo_portada($marg_top: 0px);
+      @include efecto_titulo;
+    }
+
+    .hero_paragraph {
+      @include titulo_portada($marg_top: 0px);
+      @include efecto_titulo;
+    }
+  }
+}
+
+/*Knowledge*/
+
+.knowledge {
+  background-color: #ffffff;
+
+  .knowledge_conteiner {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1em;
+    align-items: center;
+    padding-left: 10px;
+    padding-top: 15px;
+
+    .knowledge_texts {
+      text-align: justify;
+      padding: 12px;
+
+      .subtitle_knowledge {
+        text-align: center;
+        @include efecto_titulo;
+      }
+      .knowledge_paragrah {
+        line-height: 1.7;
+        margin-bottom: 15px;
+      }
+    }
+    .knowledge_picture {
+      overflow: hidden;
+      max-width: 700px;
+      margin-right: 20px;
+
+      .knowledge_img {
+        width: 100%;
+        display: block;
+        padding: 10px 10px;
+        border-radius: 30px;
+      }
+    }
+  }
+}
+
+.carousel-inner {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  background-size: cover;
+  width: 100%;
+  height: 650px;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  padding: 5px;
+  pointer-events: none;
+  padding-left: 20px;
+  padding-right: 20px;
+}
