@@ -88,7 +88,7 @@
     .hero_contacto_parrafo {
       @include titulo_portada($marg_top: 0px);
       @include efecto_titulo;
-      margin-bottom: 90px;
+      margin-bottom: 70px;
       margin-left: 25px;
       font-size: 20px;
     }

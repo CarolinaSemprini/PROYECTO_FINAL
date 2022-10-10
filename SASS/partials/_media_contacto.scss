@@ -307,6 +307,20 @@
       display: var(--show, none);
     }
   }
+  .hero_contacto_titulo {
+    @include titulo_portada($marg_top: 0px);
+    margin-left: 25px;
+    @include efecto_titulo;
+    font-size: 20px;
+  }
+
+  .hero_contacto_parrafo {
+    @include titulo_portada($marg_top: 0px);
+    @include efecto_titulo;
+    margin-bottom: 70px;
+    margin-left: 25px;
+    font-size: 20px;
+  }
 
   .Formulario {
     margin-right: 65%;
